@@ -30,6 +30,7 @@ body {
 .caro-flex {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
 }
 
@@ -47,7 +48,6 @@ body {
 
 .container div {
     height: 100px;
-    /* border: 2px solid #000; */
     font-size: 85px;
     text-align: center;
     line-height: 100px;
@@ -56,16 +56,16 @@ body {
     border-left: 1px solid #000;
 }
 
-.container div:nth-child(-n + 2) {
-    border-top: none;
+.container div:nth-child(7),
+div:nth-child(8),
+div:nth-child(9) {
+    border-bottom: 1px solid #000;
 }
 
-.container div:nth-child(odd) {
-    border-left: none;
-}
-
-.box {
-    float: left;
+.container div:nth-child(3),
+div:nth-child(6),
+div:nth-child(9) {
+    border-right: 1px solid #000;
 }
 
 .caro-win {
@@ -74,5 +74,25 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    /* background-color: aliceblue; */
+    width: 100px;
+    border-radius: 30px;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.caro-btn {
+    outline: none;
+    background: none;
+    border: 1px solid #3bbd4b;
+    border-radius: 5px;
+    padding: 5px 7px;
+    color: #fff;
+    background-color: #3bbd4d;
+    transition: ease-in 0.4s;
+    cursor: pointer;
+}
+
+.caro-btn:hover {
+    color: rgb(46, 46, 46);
+    background: #fff;
 }
