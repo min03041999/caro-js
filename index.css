@@ -1,13 +1,47 @@
+:root {
+    --dark-body: #4d4c5a;
+    --dark-main: #141529;
+    --dark-second: #79788c;
+    --dark-hover: #323048;
+    --dark-text: #f8fbff;
+    --light-body: #f3f8fe;
+    --light-main: #fdfdfd;
+    --light-second: #c3c2c8;
+    --light-hover: #edf0f5;
+    --light-text: #151426;
+    --orange: #ffc861;
+    --white: #fff;
+    --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --font-family: cursive;
+}
+
+.dark {
+    --bg-body: var(--dark-body);
+    --bg-main: var(--dark-main);
+    --bg-second: var(--dark-second);
+    --color-hover: var(--dark-hover);
+    --color-txt: var(--dark-text);
+}
+
+.light {
+    --bg-body: var(--light-body);
+    --bg-main: var(--light-main);
+    --bg-second: var(--light-second);
+    --color-hover: var(--light-hover);
+    --color-txt: var(--light-text);
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: cursive;
+    font-family: var(--font-family);
 }
 
 body {
     position: relative;
     height: 100vh;
-    background-color: #f3f8fe;
+    background-color: var(--bg-body);
+    color: var( --color-txt);
 }
 
 .caro {
@@ -20,6 +54,8 @@ body {
     padding: 20px 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: var(--bg-main);
 }
 
 .caro-title {
@@ -27,6 +63,7 @@ body {
     font-size: 2rem;
     margin-bottom: 10px;
 }
+
 .caro-flex {
     display: flex;
     justify-content: space-between;
@@ -52,20 +89,20 @@ body {
     text-align: center;
     line-height: 100px;
     cursor: pointer;
-    border-top: 1px solid #000;
-    border-left: 1px solid #000;
+    border-top: 1px solid var(--color-txt);
+    border-left: 1px solid var(--color-txt);
 }
 
 .container div:nth-child(7),
 div:nth-child(8),
 div:nth-child(9) {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--color-txt);
 }
 
 .container div:nth-child(3),
 div:nth-child(6),
 div:nth-child(9) {
-    border-right: 1px solid #000;
+    border-right: 1px solid var(--color-txt);
 }
 
 .caro-win {
@@ -76,8 +113,9 @@ div:nth-child(9) {
     z-index: 1;
     width: 100px;
     border-radius: 30px;
-    background-color: aliceblue;
+    background-color: rgb(146, 64, 64);
     text-align: center;
+    color: var( --color-txt);
 }
 
 .caro-btn {
@@ -95,4 +133,39 @@ div:nth-child(9) {
 .caro-btn:hover {
     color: rgb(46, 46, 46);
     background: #fff;
+}
+
+.toggle {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.toggle span {
+    margin-right: 10px;
+    color: var(--color-txt);
+}
+
+.dark-mode-switch {
+    position: relative;
+    width: 48px;
+    height: 25px;
+    border-radius: 14px;
+    background-color: var(--bg-second);
+    cursor: pointer;
+}
+
+.dark-mode-switch-ident {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: var(--bg-main);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.2s ease-in-out;
+}
+
+.dark .dark-mode-switch .dark-mode-switch-ident {
+    top: 2px;
+    left: calc(2px + 50%);
 }

@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caro | Javasripts</title>
     <link rel="stylesheet" href="index.css" />
-  </head>
+</head>
 
-  <body>
+<body class="light">
     <div id="win" class="caro-win"></div>
 
     <div class="caro">
-      <h2 class="caro-title">Cờ Caro</h2>
-      <div class="caro-flex">
-        <p class="caro-turn">Your turn: <span id="turn">X</span></p>
-        <form action="">
-          <button class="caro-btn" onclick="replay();">Play again</button>
-        </form>
-      </div>
-      <div class="container" id="main">
-        <div class="box" id="box1"></div>
-        <div class="box" id="box2"></div>
-        <div class="box" id="box3"></div>
-        <div class="box" id="box4"></div>
-        <div class="box" id="box5"></div>
-        <div class="box" id="box6"></div>
-        <div class="box" id="box7"></div>
-        <div class="box" id="box8"></div>
-        <div class="box" id="box9"></div>
-      </div>
+        <h2 class="caro-title">Cờ Caro</h2>
+        <div class="caro-flex">
+            <p class="caro-turn">Your turn: <span id="turn">X</span></p>
+            <form action="">
+                <button class="caro-btn" onclick="replay();">Play again</button>
+            </form>
+        </div>
+        <div class="container" id="main">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+            <div class="box" id="box5"></div>
+            <div class="box" id="box6"></div>
+            <div class="box" id="box7"></div>
+            <div class="box" id="box8"></div>
+            <div class="box" id="box9"></div>
+        </div>
+        <div class="toggle">
+            <span>Dark mode</span>
+            <div class="dark-mode-switch">
+                <div class="dark-mode-switch-ident"></div>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
-  </body>
+    <script src="dark-mode.js"></script>
+</body>
+
 </html>
